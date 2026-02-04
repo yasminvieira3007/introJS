@@ -41,13 +41,17 @@
 
 // Respostas:
 let idade = Number(prompt("Qual a sua idade?"));
-let temHabilitacao = prompt("Você possui habilitação? (sim ou não)".toLowerCase());
+
 if (idade < 18) {
     alert ("Você não pode tirar habilitação.");
-} else if (idade >= 18 && temHabilitacao === "não") {
-    alert ("Você pode tentar a prova do Detran");
-} else if (idade >= 18 && temHabilitacao === "sim") {
-    alert ("Você pode dirigir");
-} else alert("Resposta inválida");
+} else {
+    let temHabilitacao = prompt ("Você possui habilitação? (sim ou não)"). toLowerCase();
 
-
+    if (temHabilitacao === "sim") {
+        alert ("Você pode dirigir.");
+    } else if (temHabilitacao === "não") {
+        alert("Você pode tentar a prova do Detran.");
+    }else {
+        alert("Resposta inválida")
+    }
+}
